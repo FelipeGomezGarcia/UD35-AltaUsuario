@@ -12,34 +12,35 @@
   integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
   crossorigin="anonymous"
 ></script>
+<div class="container">
+  <div class="text-center row g-3 needs-validation" novalidate>
+    <h1>Formulario de contacto</h1>
+    <div class="row mb-3">
+      <label for="exampleFormControlInput1" class="col-2 form-label">Nombre</label>
+      <input type="email" class="col form-control" #nombre placeholder="Nombre y apellido" required>
+      <div class="invalid-feedback">Introduzca su nombre y apellido</div>
+    </div>
+    <div class="row mb-3">
+      <label for="exampleFormControlInput1" class="col-2 form-label">Email</label>
+      <input type="email" class="col form-control" #email placeholder="name@example.com" required>
+      <div class="invalid-feedback">Introduzca un email valido</div>
+    </div>
+    <div class="row mb-3">
+      <label for="exampleFormControlTextarea1" class="col-2 form-label">Mensaje</label>
+      <textarea class="col form-control" #mensaje rows="3" required></textarea>
+      <div class="invalid-feedback">Introduzca un mensaje</div>
+    </div>
+    <div class="row mb-3">
+      <label for="exampleFormControlInput1" class="col-2 form-label" >{{operacion}}</label>
+      <input type="email" class="col form-control" #antiSpam placeholder="Respuesta" required>
+      <div class="invalid-feedback">Validacion anti-spam incorrecta</div>
+    </div>
+    <div class="col-12 ">
+      <button class="btn btn-primary" (click)="addMessage(nombre.value,email.value,mensaje.value,antiSpam.value)">Submit form</button>
+    </div>
+  </div>
 
-<div class="container text-center needs-validation" novalidate>
-  <h1>Formulario de contacto</h1>
-  <div class="row mb-3">
-    <label for="exampleFormControlInput1" class="col-2 form-label">Nombre</label>
-    <input type="email" class="col form-control" #nombre placeholder="Nombre y apellido" required>
-    <div class="invalid-feedback">Introduzca su nombre y apellido</div>
+  <div>
+    <app-datos [mensaje]="message"></app-datos>
   </div>
-  <div class="row mb-3">
-    <label for="exampleFormControlInput1" class="col-2 form-label">Email</label>
-    <input type="email" class="col form-control" #email placeholder="name@example.com" required>
-    <div class="invalid-feedback">Introduzca un email valido</div>
-  </div>
-  <div class="row mb-3">
-    <label for="exampleFormControlTextarea1" class="col-2 form-label">Mensaje</label>
-    <textarea class="col form-control" #mensaje rows="3" required></textarea>
-    <div class="invalid-feedback">Introduzca un mensaje</div>
-  </div>
-  <div class="row mb-3">
-    <label for="exampleFormControlInput1" class="col-2 form-label">2+3=?</label>
-    <input type="email" class="col form-control" id="antiSpam" placeholder="Respuesta" required>
-    <div class="invalid-feedback">Validacion anti-spam incorrecta</div>
-  </div>
-  <div class="col-12 ">
-    <button class="btn btn-primary" (click)="addMessage(nombre.value,email.value,mensaje.value)">Submit form</button>
-  </div>
-</div>
-
-<div>
-  <app-datos [mensaje]="message"></app-datos>
 </div>
