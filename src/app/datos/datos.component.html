@@ -13,20 +13,11 @@
   crossorigin="anonymous"
 ></script>
 
-<h2>Listado clientes</h2>
-
-<div class="row border-bottom" *ngFor="let cliente of datos">
-  <div class="col">
-    {{ cliente.nombre }}
-  </div>
-  <div class="col">
-    {{ cliente.cif }}
-  </div>
-  <div class="col">
-    {{ cliente.direccion }}
-  </div>
-  <div class="col">
-    {{ cliente.grupo }}
+<div class="container">
+  <h3>Mensaje</h3>
+  <div>
+    <p>Autor: {{mensaje.autor}}</p>
+    <p>Email: {{mensaje.email}}</p>
+    <p>Mensaje: {{mensaje.contenido}}</p>
   </div>
 </div>
-

@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'UD35-AltaUsuario';
 
-  clientes:Array<any>=[];
+  message:any;
 
-  addCliente(nombre:any,cif:any,direccion:any,group:any){
+  addMessage(autor:any,email:any,mensaje:any){
 
-    this.clientes.push({nombre: nombre, cif:cif, direccion: direccion,grupo: group});
+    this.message = {autor:autor,email:email,contenido:mensaje};
 
   }
 }
