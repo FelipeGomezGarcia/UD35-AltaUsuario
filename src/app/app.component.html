@@ -13,7 +13,7 @@
   crossorigin="anonymous"
 ></script>
 
-<form class="container text-center needs-validation" novalidate>
+<div class="container text-center needs-validation" novalidate>
   <h1>Formulario de contacto</h1>
   <div class="row mb-3">
     <label for="exampleFormControlInput1" class="col-2 form-label">Nombre</label>
@@ -36,9 +36,9 @@
     <div class="invalid-feedback">Validacion anti-spam incorrecta</div>
   </div>
   <div class="col-12 ">
-    <button class="btn btn-primary" type="submit" (click)="addMessage(nombre.value,email.value,mensaje.value)">Submit form</button>
+    <button class="btn btn-primary" (click)="addMessage(nombre.value,email.value,mensaje.value)">Submit form</button>
   </div>
-</form>
+</div>
 
 <div>
   <app-datos [mensaje]="message"></app-datos>

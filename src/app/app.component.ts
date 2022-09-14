@@ -13,6 +13,5 @@ export class AppComponent {
   addMessage(autor:any,email:any,mensaje:any){
 
     this.message = {autor:autor,email:email,contenido:mensaje};
-
   }
 }
